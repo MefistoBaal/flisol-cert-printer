@@ -1,0 +1,24 @@
+{
+  "name": "flisol-cert-printer",
+  "version": "1.0.0",
+  "description": "PHP Sys for certs prints on Flisol2019",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/mefistobaal/flisol-cert-printer.git"
+  },
+  "author": "Santiago Hurtado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/mefistobaal/flisol-cert-printer/issues"
+  },
+  "homepage": "https://gitlab.com/mefistobaal/flisol-cert-printer#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.0",
+    "popper.js": "^1.15.0"
+  }
+}
