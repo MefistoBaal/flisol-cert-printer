@@ -13,7 +13,7 @@ include 'layouts/header.php';
                             </a>
                         </div>
                         <div class="login-form">
-                            <form action="" method="post">
+                            <form id="log_form" action="" method="post">
                                 <div class="form-group">
                                     <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
                                 </div>

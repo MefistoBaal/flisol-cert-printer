@@ -14,9 +14,9 @@ include 'layouts/header.php';
                             <p>Consulta tu certificado de asistencia a FLISoL 2019</p>
                             <form id="consulta_certificado">
                                 <div class="form-group">
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="Documento o Email">
+                                    <input class="au-input au-input--full" type="text" id="email" name="email" placeholder="Documento o Email" required>
                                 </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Consultar</button>
+                                <button id="sub_consulta" class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Consultar</button>
                             </form>
                         </div>
                     </div>
