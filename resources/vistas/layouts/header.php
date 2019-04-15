@@ -28,6 +28,7 @@
     <link href="vendors/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
     <link href="vendors/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="/node_modules/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="/node_modules/jquery-toast-plugin/dist/jquery.toast.min.css">
 
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">

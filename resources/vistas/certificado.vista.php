@@ -1,5 +1,6 @@
 <?php
 include 'layouts/header.php';
+include 'layouts/scripts.php';
 ?>
         <div class="page-content--bge5">
             <div class="container">
@@ -18,14 +19,15 @@ include 'layouts/header.php';
                                 </div>
                                 <button id="sub_consulta" class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Consultar</button>
                             </form>
+
+            <div id="contenedor_cert">
+
+            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="contenedor_cert">
-
-            </div>
         </div>
     </div>
 <?php
-include 'layouts/scripts.php';
+new Scripts('consulta');

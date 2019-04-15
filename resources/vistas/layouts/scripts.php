@@ -1,5 +1,34 @@
+<?php
+class Scripts
+{
+    public function __construct($extra = null)
+    {
+        try {
+            switch ($extra) {
+                case 'consulta':
+                    $ext_scrits = '<script src="js/consulta.js"></script>';
+                    break;
+                case 'login':
+                    $ext_scrits = '<script src="js/login.js"></script>';
+                    break;
+                default:
+                    # code...
+                    break;
+            }
+            $this->scripts($ext_scrits);
+        } catch (\Eception $e) {
+            die('ERROR_SCRIPTS: ' . $e->getMessage());
+        }
+    }
+
+    public function scripts($ext = null)
+    {
+        ?>
+
+
     <!-- Jquery JS-->
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
     <!-- Bootstrap JS-->
     <script src="/vendors/popper.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -21,9 +50,15 @@
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
-    <script src="js/consulta.js"></script>
-
+    <?php echo $ext; ?>
 </body>
 
 </html>
 <!-- end document-->
+
+
+        <?php
+}
+}
+
+?>

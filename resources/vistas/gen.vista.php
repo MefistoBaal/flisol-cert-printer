@@ -4,6 +4,7 @@ include 'layouts/header.php';
 include 'layouts/header_movile.php';
 include 'layouts/menu.php';
 include 'layouts/top_bar.php';
+include 'layouts/scripts.php';
 ?>
             <!-- MAIN CONTENT-->
             <div class="main-content">
@@ -80,4 +81,4 @@ include 'layouts/top_bar.php';
                         </div>
 <?php
 include 'layouts/footer.php';
-include 'layouts/scripts.php';
+new Scripts();

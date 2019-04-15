@@ -1,7 +1,7 @@
 <?php
 (isset($_SESSION['iduser'])) ? header('Location: /dash') : null;
-
 include 'layouts/header.php';
+include 'layouts/scripts.php';
 ?>
         <div class="page-content--bge5">
             <div class="container">
@@ -13,14 +13,15 @@ include 'layouts/header.php';
                             </a>
                         </div>
                         <div class="login-form">
-                            <form id="log_form" action="" method="post">
+                            <form id="log_form">
                                 <div class="form-group">
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
+                                    <input class="au-input au-input--full" type="email" name="email"
+                                    id="in_email" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <input class="au-input au-input--full" type="password" name="password" placeholder="Contraseña">
+                                    <input class="au-input au-input--full" type="password" name="password" id="in_pass" placeholder="Contraseña">
                                 </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Iniciar Sesión</button>
+                                <button id="log_submit" class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Iniciar Sesión</button>
                             </form>
                         </div>
                     </div>
@@ -30,4 +31,4 @@ include 'layouts/header.php';
 
     </div>
 <?php
-include 'layouts/scripts.php';
+new Scripts('login');

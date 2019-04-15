@@ -27,6 +27,19 @@ class Consulta_Certificados
         }
     }
 
+    private function consulta_rol($id_rol)
+    {
+        try {
+            $sql_rol  = 'SELECT Nombre_Rol FROM roles WHERE idroles = :idrol';
+            $resp_rol = $this->con->ConectFlisol($sql_rol);
+            $resp_rol[0]->bindValue(':idrol', $id_rol, PDO::PARAM_INT);
+
+            return ($resp_rol[0]->execute()) ? $resp_rol[0]->fetch(PDO::FETCH_OBJ)->Nombre_Rol : $resp_rol[0]->errorInfo()[2];
+        } catch (\Exception $e) {
+            die('ERROR_ROL: ' . $e->getMessage());
+        }
+    }
+
     private function consultar_certificado($data_busqueda)
     {
         try {
@@ -44,13 +57,23 @@ class Consulta_Certificados
                 $consulta_doc = $resp_consulta_doc[0]->fetchAll();
                 if (count($consulta_doc) > 0) {
                     $this->__salida(array(
-                        'resp' => 1,
+                        'resp'      => 1,
+                        'nombres'   => $consulta_doc[0]['Nombres'],
+                        'apellidos' => $consulta_doc[0]['Apellidos'],
+                        'correo'    => $consulta_doc[0]['Correo'],
+                        'documento' => $consulta_doc[0]['Documento'],
+                        'rol'       => $this->consulta_rol($consulta_doc[0]['idrol']),
                     ));
                 } elseif ($resp_consulta_email[0]->execute()) {
                     $consulta_email = $resp_consulta_email[0]->fetchAll();
                     if (count($consulta_email) > 0) {
                         $this->__salida(array(
-                            'resp' => 1,
+                            'resp'      => 1,
+                            'nombres'   => $consulta_email[0]['Nombres'],
+                            'apellidos' => $consulta_email[0]['Apellidos'],
+                            'correo'    => $consulta_email[0]['Correo'],
+                            'documento' => $consulta_email[0]['Documento'],
+                            'rol'       => $this->consulta_rol($consulta_email[0]['idrol']),
                         ));
                     } else {
                         $this->__salida(array(

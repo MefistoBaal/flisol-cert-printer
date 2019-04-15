@@ -1,3 +1,7 @@
+function generar_cert() {
+
+}
+
 function consultar_cert() {
     $.ajax({
         type: 'POST',
@@ -6,6 +10,7 @@ function consultar_cert() {
         beforeSend: function () {
             document.getElementById('doc_busq').disabled = true;
             document.getElementById('sub_consulta').disabled = true;
+            document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-success"><div class="card-header"><strong class="card-title">Buscando certificado...</strong></div><div class="card-body text-center"><img src="/images/loader.svg" style="width:100px; "></img></div></div>';
         },
         success: function (data) {
             try {
@@ -14,17 +19,18 @@ function consultar_cert() {
                     case 1:
                         document.getElementById('doc_busq').disabled = false;
                         document.getElementById('sub_consulta').disabled = false;
-                        document.getElementById('contenedor_cert').innerHTML = '<div class="container"><div class="login-wrap"><div class="login-content"><div class="login-form"><div class="card border border-success"><div class="card-header"><strong class="card-title">Card Outline</strong></div><div class="card-body"><p class="card-text">Some quick example text to build on the card title and make up the bulk of the cardcontent.</p></div></div></div></div></div></div>';
+                        document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-success"><div class="card-header"><strong class="card-title">' + respuesta.nombres + ' ' + respuesta.apellidos + '</strong></div><div class="card-body"><p class="card-text"><strong>Correo:</strong> ' + respuesta.correo + '.</p><p class="card-text"><strong>Documento:</strong> ' + respuesta.documento + '.</p><p class="card-text"><strong>' + respuesta.rol + '</strong></p></div></div>';
+
                         break;
                     case 2:
                         document.getElementById('doc_busq').disabled = false;
                         document.getElementById('sub_consulta').disabled = false;
-                        document.getElementById('contenedor_cert').innerHTML = '<div class="container"><div class="login-wrap"><div class="login-content"><div class="login-form"><div class="card border border-secondary"><div class="card-header"><strong class="card-title">No existe el certificado</strong></div><div class="card-body"><p class="card-text">No se ha encontrado ningun certificado para el registro ingresado.</p></div></div></div></div></div></div>';
+                        document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-secondary"><div class="card-header"><strong class="card-title">No existe el certificado</strong></div><div class="card-body"><p class="card-text">No se ha encontrado ningun certificado para el registro ingresado.</p></div></div></div>';
                         break;
                     case 0:
                         document.getElementById('doc_busq').disabled = false;
                         document.getElementById('sub_consulta').disabled = false;
-                        document.getElementById('contenedor_cert').innerHTML = '<div class="container"><div class="login-wrap"><div class="login-content"><div class="login-form"><div class="card border border-secondary"><div class="card-header"><strong class="card-title">Oops</strong></div><div class="card-body"><p class="card-text">ha ocurrido un error.</p></div></div></div></div></div></div>';
+                        document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-secondary"><div class="card-header"><strong class="card-title">Oops</strong></div><div class="card-body"><p class="card-text">ha ocurrido un error.</p></div></div>';
                         console.log(respuesta.info);
 
                         break;
@@ -32,12 +38,10 @@ function consultar_cert() {
                         break;
                 }
             } catch (error) {
-
                 document.getElementById('doc_busq').disabled = false;
                 document.getElementById('sub_consulta').disabled = false;
-                document.getElementById('contenedor_cert').innerHTML = '<div class="container"><div class="login-wrap"><div class="login-content"><div class="login-form"><div class="card border border-secondary"><div class="card-header"><strong class="card-title">Oops</strong></div><div class="card-body"><p class="card-text">ha ocurrido un error.</p></div></div></div></div></div></div>';
-                console.log(erro);
-
+                document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-secondary"><div class="card-header"><strong class="card-title">Oops</strong></div><div class="card-body"><p class="card-text">ha ocurrido un error.</p></div></div>';
+                console.log(error);
             }
         }
     });
