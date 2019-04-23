@@ -1,7 +1,4 @@
 <?php
-session_name('FlisolADM');
-session_start();
-(!isset($_SESSION['id_adm'])) ? header('Location: /login') : null;
 include 'layouts/header.php';
 include 'layouts/header_movile.php';
 include 'layouts/menu.php';

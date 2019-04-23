@@ -58,11 +58,13 @@ include 'layouts/scripts.php';
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group">
+                                                        <input id="cc-exp" name="cel" type="number" class="form-control" placeholder="Celular">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
                                                         <select name="select_rol" id="select_rol" class="form-control" required>
                                                             <option value="">-- Rol --</option>
-                                                            <option value="1">Option #1</option>
-                                                            <option value="2">Option #2</option>
-                                                            <option value="3">Option #3</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -77,8 +79,11 @@ include 'layouts/scripts.php';
                                         </form>
                                     </div>
                                 </div>
+                                <div id="resp_gen">
+
+                                </div>
                             </div>
                         </div>
 <?php
 include 'layouts/footer.php';
-new Scripts();
+new Scripts('gen_cert');

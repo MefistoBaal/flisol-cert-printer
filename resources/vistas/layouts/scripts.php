@@ -11,6 +11,9 @@ class Scripts
                 case 'login':
                     $ext_scrits = '<script src="js/login.js"></script>';
                     break;
+                case 'gen_cert':
+                    $ext_scrits = '<script src="js/gen_cert.js"></script>';
+                    break;
                 default:
                     # code...
                     break;

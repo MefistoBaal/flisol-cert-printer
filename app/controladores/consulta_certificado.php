@@ -17,8 +17,8 @@ class Consulta_Certificados
         }
     }
 
-    /**Funcion salida solo recive com argumentosm arreglos */
-    private function __salida($texto_respuesta)
+    /**Funcion salida solo recibe como argumentos, arrays */
+    private function __salida($texto_respuesta = array())
     {
         try {
             echo json_encode($texto_respuesta);

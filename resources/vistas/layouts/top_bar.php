@@ -1,3 +1,9 @@
+<?php
+session_name('FlisolADM');
+session_start();
+(!isset($_SESSION['id_adm'])) ? header('Location: /login') : null;
+
+?>
         <!-- PAGE CONTAINER-->
         <div class="page-container">
             <!-- HEADER DESKTOP-->
