@@ -26,7 +26,7 @@
     <link href="/node_modules/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
     <link href="vendors/wow/animate.css" rel="stylesheet" media="all">
     <link href="vendors/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="vendors/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/node_modules/select2/dist/css/select2.min.css" rel="stylesheet" media="all">
     <link href="/node_modules/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="/node_modules/jquery-toast-plugin/dist/jquery.toast.min.css">
 
