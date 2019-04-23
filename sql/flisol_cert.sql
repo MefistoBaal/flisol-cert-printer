@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 23-04-2019 a las 17:57:46
+-- Tiempo de generación: 23-04-2019 a las 20:19:45
 -- Versión del servidor: 10.3.14-MariaDB
 -- Versión de PHP: 7.3.4
 
@@ -65,7 +65,7 @@ CREATE TABLE `usuarios_adm` (
   `Nombres` varchar(45) COLLATE utf8_bin NOT NULL,
   `Apellidos` varchar(45) COLLATE utf8_bin NOT NULL,
   `Email` varchar(45) COLLATE utf8_bin NOT NULL,
-  `Contrasena` varchar(45) COLLATE utf8_bin NOT NULL,
+  `Contrasena` varchar(150) COLLATE utf8_bin NOT NULL,
   `Celular` int(11) NOT NULL,
   `Tipo_Documento` varchar(45) COLLATE utf8_bin NOT NULL,
   `Documento` varchar(45) COLLATE utf8_bin NOT NULL
@@ -76,6 +76,13 @@ CREATE TABLE `usuarios_adm` (
 --
 
 TRUNCATE TABLE `usuarios_adm`;
+--
+-- Volcado de datos para la tabla `usuarios_adm`
+--
+
+INSERT INTO `usuarios_adm` (`idusuarios_adm`, `Nombres`, `Apellidos`, `Email`, `Contrasena`, `Celular`, `Tipo_Documento`, `Documento`) VALUES
+(1, 'Admin', 'Admin', 'admin@admin', '$2y$10$.JrBb2WEowzosO8WYxsD8.X9LiUMZtwWyp6kUjum/eo7QwX4H4.Se', 123, 'CC', '123456');
+
 -- --------------------------------------------------------
 
 --
@@ -87,6 +94,7 @@ CREATE TABLE `usuarios_asist` (
   `idusuarios_asist` int(11) NOT NULL,
   `Nombres` varchar(45) COLLATE utf8_bin NOT NULL,
   `Apellidos` varchar(45) COLLATE utf8_bin NOT NULL,
+  `Tipo_Documento` varchar(45) COLLATE utf8_bin NOT NULL,
   `Documento` int(11) NOT NULL,
   `Correo` varchar(45) COLLATE utf8_bin NOT NULL,
   `Celular` varchar(45) COLLATE utf8_bin NOT NULL,
@@ -142,13 +150,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `usuarios_adm`
 --
 ALTER TABLE `usuarios_adm`
-  MODIFY `idusuarios_adm` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idusuarios_adm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios_asist`
 --
 ALTER TABLE `usuarios_asist`
-  MODIFY `idusuarios_asist` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idusuarios_asist` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
