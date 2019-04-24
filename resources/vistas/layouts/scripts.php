@@ -14,8 +14,11 @@ class Scripts
                 case 'gen_cert':
                     $ext_scrits = '<script src="js/gen_cert.js"></script>';
                     break;
+                case 'dash':
+                    $ext_scrits = '<script src="js/dash.js"></script>';
+                    break;
                 default:
-                    # code...
+                    $ext_scrits = '';
                     break;
             }
             $this->scripts($ext_scrits);

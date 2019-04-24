@@ -37,7 +37,12 @@ class Login
                 if ($resp_data[0]->rowCount() > 0) {
                     $data_usuario = $resp_data[0]->fetch(PDO::FETCH_ASSOC);
                     if (password_verify($data_log['password'], $data_usuario['Contrasena'])) {
-                        (new Inicio_Sesion($data_usuario)) ? $this->__salida(array('resp' => 1)) : $this->__salida(array('resp' => 0, 'info' => 'No se ha podido crear la sesion.'));
+                        (new Inicio_Sesion($data_usuario)) ? $this->__salida(array(
+                            'resp' => 1,
+                        )) : $this->__salida(array(
+                            'resp' => 0,
+                            'info' => 'No se ha podido crear la sesion.',
+                        ));
                     } else {
                         $this->__salida(array(
                             'resp' => 2,
