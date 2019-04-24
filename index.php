@@ -18,7 +18,9 @@ class IndexViews
             $rutas = new Rutas();
 
             /**Inclusion de vista */
-            return (isset($vista['vista'])) ? $rutas->vista($vista['vista']) : $rutas->vista(null);
+            return (isset($vista['vista']))
+            ? $rutas->vista($vista['vista'])
+            : $rutas->vista(null);
         } catch (\Exception $e) {
             die('ERROR: ' . $e->getMessage());
         }

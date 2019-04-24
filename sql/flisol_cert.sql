@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 23-04-2019 a las 20:19:45
+-- Tiempo de generación: 24-04-2019 a las 23:48:01
 -- Versión del servidor: 10.3.14-MariaDB
 -- Versión de PHP: 7.3.4
 
@@ -25,6 +25,57 @@ DROP DATABASE IF EXISTS `flisol_cert`;
 CREATE DATABASE IF NOT EXISTS `flisol_cert` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 USE `flisol_cert`;
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `certs_env`
+--
+
+DROP TABLE IF EXISTS `certs_env`;
+CREATE TABLE `certs_env` (
+  `idcerts_env` int(11) NOT NULL,
+  `Cantidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Truncar tablas antes de insertar `certs_env`
+--
+
+TRUNCATE TABLE `certs_env`;
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `certs_gen`
+--
+
+DROP TABLE IF EXISTS `certs_gen`;
+CREATE TABLE `certs_gen` (
+  `idcerts_gen` int(11) NOT NULL,
+  `Cantidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Truncar tablas antes de insertar `certs_gen`
+--
+
+TRUNCATE TABLE `certs_gen`;
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `consultas_gen`
+--
+
+DROP TABLE IF EXISTS `consultas_gen`;
+CREATE TABLE `consultas_gen` (
+  `idconsultas_gen` int(11) NOT NULL,
+  `Cantidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Truncar tablas antes de insertar `consultas_gen`
+--
+
+TRUNCATE TABLE `consultas_gen`;
 -- --------------------------------------------------------
 
 --
@@ -111,6 +162,27 @@ TRUNCATE TABLE `usuarios_asist`;
 --
 
 --
+-- Indices de la tabla `certs_env`
+--
+ALTER TABLE `certs_env`
+  ADD PRIMARY KEY (`idcerts_env`),
+  ADD UNIQUE KEY `idcerts_env_UNIQUE` (`idcerts_env`);
+
+--
+-- Indices de la tabla `certs_gen`
+--
+ALTER TABLE `certs_gen`
+  ADD PRIMARY KEY (`idcerts_gen`),
+  ADD UNIQUE KEY `idcerts_gen_UNIQUE` (`idcerts_gen`);
+
+--
+-- Indices de la tabla `consultas_gen`
+--
+ALTER TABLE `consultas_gen`
+  ADD PRIMARY KEY (`idconsultas_gen`),
+  ADD UNIQUE KEY `idconsultas_gen_UNIQUE` (`idconsultas_gen`);
+
+--
 -- Indices de la tabla `roles`
 --
 ALTER TABLE `roles`
@@ -141,6 +213,24 @@ ALTER TABLE `usuarios_asist`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `certs_env`
+--
+ALTER TABLE `certs_env`
+  MODIFY `idcerts_env` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `certs_gen`
+--
+ALTER TABLE `certs_gen`
+  MODIFY `idcerts_gen` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `consultas_gen`
+--
+ALTER TABLE `consultas_gen`
+  MODIFY `idconsultas_gen` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
@@ -150,13 +240,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `usuarios_adm`
 --
 ALTER TABLE `usuarios_adm`
-  MODIFY `idusuarios_adm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT;
+  MODIFY `idusuarios_adm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios_asist`
 --
 ALTER TABLE `usuarios_asist`
-  MODIFY `idusuarios_asist` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT;
+  MODIFY `idusuarios_asist` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
