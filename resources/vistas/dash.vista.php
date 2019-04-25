@@ -28,7 +28,7 @@ include 'layouts/scripts.php';
                                                 <i class="zmdi zmdi-account-o"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>0</h2>
+                                                <h2 id="asist_reg">0</h2>
                                                 <span>Asistentes registrados</span>
                                             </div>
                                         </div>
@@ -40,10 +40,10 @@ include 'layouts/scripts.php';
                                     <div class="overview__inner">
                                         <div class="overview-box clearfix">
                                             <div class="icon">
-                                                <i class="zmdi zmdi-shopping-cart"></i>
+                                                <i class="fa fa-certificate"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>0</h2>
+                                                <h2 id="certs_gen">0</h2>
                                                 <span>Certificados generados</span>
                                             </div>
                                         </div>
@@ -55,10 +55,10 @@ include 'layouts/scripts.php';
                                     <div class="overview__inner">
                                         <div class="overview-box clearfix">
                                             <div class="icon">
-                                                <i class="zmdi zmdi-calendar-note"></i>
+                                                <i class="fa fa-mail-forward"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>0</h2>
+                                                <h2 id="certs_env">0</h2>
                                                 <span>Certificados enviados</span>
                                             </div>
                                         </div>
@@ -70,10 +70,10 @@ include 'layouts/scripts.php';
                                     <div class="overview__inner">
                                         <div class="overview-box clearfix">
                                             <div class="icon">
-                                                <i class="zmdi zmdi-money"></i>
+                                                <i class="fa fa-cogs"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>0</h2>
+                                                <h2 id="consul_gen">0</h2>
                                                 <span>Consultas generadas</span>
                                             </div>
                                         </div>
@@ -96,15 +96,8 @@ include 'layouts/scripts.php';
                                                 <th>Acción</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>100398</td>
-                                                <td>iPhone X 64Gb Grey</td>
-                                                <td>$999.00</td>
-                                                <td>1</td>
-                                                <td>$999.00</td>
-                                            </tr>
+                                        <tbody id="data_users">
+
                                         </tbody>
                                     </table>
                                 </div>

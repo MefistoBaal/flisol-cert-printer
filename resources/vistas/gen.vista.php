@@ -39,10 +39,10 @@ include 'layouts/scripts.php';
                                                     <div class="form-group">
                                                         <select name="select_t_doc" id="select_t_doc" class="form-control" required>
                                                             <option value="">-- Tipo de Documento --</option>
-                                                            <option value="1">Cédula de Ciudadania</option>
-                                                            <option value="1">Cédula de Extrangería</option>
-                                                            <option value="2">Tarjeta de Identidad</option>
-                                                            <option value="2">Permiso especial de permanencia</option>
+                                                            <option>Cédula de Ciudadania</option>
+                                                            <option>Cédula de Extrangería</option>
+                                                            <option>Tarjeta de Identidad</option>
+                                                            <option>Permiso especial de permanencia</option>
                                                         </select>
                                                     </div>
                                                 </div>

@@ -77,7 +77,7 @@ class Generar_Certificados
             $resp_reg_user = $this->con->ConectFlisol($sql_reg_user);
             $resp_reg_user[0]->bindValue(':nombres', htmlentities(addslashes($info['nombres'])), PDO::PARAM_STR);
             $resp_reg_user[0]->bindValue(':apellidos', htmlentities(addslashes($info['apellidos'])), PDO::PARAM_STR);
-            $resp_reg_user[0]->bindValue(':t_doc', htmlentities(addslashes($info['select_t_doc'])), PDO::PARAM_INT);
+            $resp_reg_user[0]->bindValue(':t_doc', htmlentities(addslashes($info['select_t_doc'])), PDO::PARAM_STR);
             $resp_reg_user[0]->bindValue(':doc', htmlentities(addslashes($info['n_doc'])), PDO::PARAM_INT);
             $resp_reg_user[0]->bindValue(':correo', htmlentities(addslashes($info['email'])), PDO::PARAM_STR);
             $resp_reg_user[0]->bindValue(':cel', htmlentities(addslashes($info['cel'])), PDO::PARAM_STR);

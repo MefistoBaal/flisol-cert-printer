@@ -22,6 +22,7 @@ class Consulta_Certificados
     {
         try {
             echo json_encode($texto_respuesta);
+            exit;
         } catch (\Exception $e) {
             die('ERROR_SALIDA: ' . $e->getMessage());
         }
@@ -56,6 +57,7 @@ class Consulta_Certificados
             if ($resp_consulta_doc[0]->execute()) {
                 $consulta_doc = $resp_consulta_doc[0]->fetchAll();
                 if (count($consulta_doc) > 0) {
+                    Generar_Estadistica::contar_consulta();
                     $this->__salida(array(
                         'resp'      => 1,
                         'nombres'   => $consulta_doc[0]['Nombres'],
@@ -67,6 +69,7 @@ class Consulta_Certificados
                 } elseif ($resp_consulta_email[0]->execute()) {
                     $consulta_email = $resp_consulta_email[0]->fetchAll();
                     if (count($consulta_email) > 0) {
+                        Generar_Estadistica::contar_consulta();
                         $this->__salida(array(
                             'resp'      => 1,
                             'nombres'   => $consulta_email[0]['Nombres'],
