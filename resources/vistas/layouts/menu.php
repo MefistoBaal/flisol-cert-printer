@@ -10,23 +10,18 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a href="/dash">
-                                <i class="fas fa-tachometer-alt"></i>Inicio</a>
+                                <i class="fas fa-tachometer-alt"></i>Inicio
+                            </a>
                         </li>
                         <li>
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-users"></i>Asistentes</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="/asistentes">Registrados</a>
-                                </li>
-                                <li>
-                                    <a href="/registrar">Registrar</a>
-                                </li>
-                            </ul>
+                            <a class="js-arrow" href="/asistentes">
+                                <i class="fas fa-users"></i>Asistentes
+                            </a>
                         </li>
                         <li>
                             <a href="/gen">
-                                <i class="fas fa-file-text"></i>Generar Certificado</a>
+                                <i class="fas fa-file-text"></i>Generar Certificado
+                            </a>
                         </li>
                     </ul>
                 </nav>

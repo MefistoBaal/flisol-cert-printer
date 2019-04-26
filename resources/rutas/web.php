@@ -36,6 +36,9 @@ class Rutas
                 case 'gen':
                     $this->vistas::_return_vista('gen');
                     break;
+                case 'asistentes':
+                    $this->vistas::_return_vista('asistentes');
+                    break;
                 default:
                     $this->vistas::_return_vista('404');
                     break;

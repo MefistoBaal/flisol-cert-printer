@@ -31,9 +31,6 @@ function stats() {
                 });
             }
         },
-        error: function (error) {
-
-        },
     });
 }
 function u_reg() {
@@ -48,9 +45,14 @@ function u_reg() {
                     case 1:
                         var tabla = '';
                         for (let index = 0; index < users.users.length; index++) {
-                            tabla += '<tr><td>' + users.users[index].Fecha + '</td><td>' + users.users[index].Nombres + ' ' + users.users[index].Apellidos + '</td><td>' + users.users[index].Tipo_Documento + '</td><td>' + users.users[index].Documento + '</td><td>' + users.users[index].Correo + '</td></tr>';
+                            tabla += '<tr><td>' + users.users[index].Fecha + '</td><td>' + users.users[index].Nombres + ' ' + users.users[index].Apellidos + '</td><td>' + users.users[index].Tipo_Documento + '</td><td>' + users.users[index].Documento + '</td><td>' + users.users[index].Correo + '</td><td></td></tr>';
                         }
+                        //TODO Agregar iconos de accion en la tabla
                         document.getElementById('data_users').innerHTML = tabla;
+                        $('#table_data_users').DataTable({
+                            responsive: true,
+                            paging: false,
+                        });
                         break;
                     case 0:
                         break;
@@ -61,9 +63,6 @@ function u_reg() {
 
             }
         },
-        error: function (error) {
-
-        }
     });
 }
 window.onload = function () {

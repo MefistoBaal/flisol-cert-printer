@@ -17,6 +17,9 @@ class Scripts
                 case 'dash':
                     $ext_scrits = '<script src="js/dash.js"></script>';
                     break;
+                case 'asist':
+                    $ext_scrits = '<script src="js/asistentes.js"></script>';
+                    break;
                 default:
                     $ext_scrits = '';
                     break;
@@ -53,6 +56,9 @@ class Scripts
     <script src="vendors/chartjs/Chart.bundle.min.js"></script>
     <script src="/node_modules/select2/dist/js/select2.min.js">
     </script>
+    <script src="/vendors/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 
     <!-- Main JS-->
     <script src="js/main.js"></script>

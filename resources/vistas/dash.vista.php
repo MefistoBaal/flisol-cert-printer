@@ -85,7 +85,7 @@ include 'layouts/scripts.php';
                             <div class="col-lg-12">
                                 <h2 class="title-1 m-b-25">Últimos asistentes registrados</h2>
                                 <div class="table-responsive table--no-card m-b-40">
-                                    <table class="table table-borderless table-striped table-earning">
+                                    <table class="table table-borderless table-striped table-earning" id="table_data_users">
                                         <thead>
                                             <tr>
                                                 <th>fecha</th>
@@ -93,7 +93,6 @@ include 'layouts/scripts.php';
                                                 <th>tipo de documento</th>
                                                 <th>documento</th>
                                                 <th>correo</th>
-                                                <th>Acción</th>
                                             </tr>
                                         </thead>
                                         <tbody id="data_users">
