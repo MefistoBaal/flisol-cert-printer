@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 24-04-2019 a las 23:48:01
+-- Tiempo de generación: 26-04-2019 a las 00:04:08
 -- Versión del servidor: 10.3.14-MariaDB
 -- Versión de PHP: 7.3.4
 
@@ -42,6 +42,14 @@ CREATE TABLE `certs_env` (
 --
 
 TRUNCATE TABLE `certs_env`;
+--
+-- Volcado de datos para la tabla `certs_env`
+--
+
+INSERT INTO `certs_env` (`idcerts_env`, `Cantidad`) VALUES
+(1, 0),
+(2, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -59,6 +67,14 @@ CREATE TABLE `certs_gen` (
 --
 
 TRUNCATE TABLE `certs_gen`;
+--
+-- Volcado de datos para la tabla `certs_gen`
+--
+
+INSERT INTO `certs_gen` (`idcerts_gen`, `Cantidad`) VALUES
+(1, 0),
+(2, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -76,6 +92,14 @@ CREATE TABLE `consultas_gen` (
 --
 
 TRUNCATE TABLE `consultas_gen`;
+--
+-- Volcado de datos para la tabla `consultas_gen`
+--
+
+INSERT INTO `consultas_gen` (`idconsultas_gen`, `Cantidad`) VALUES
+(1, 0),
+(2, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -149,7 +173,8 @@ CREATE TABLE `usuarios_asist` (
   `Documento` int(11) NOT NULL,
   `Correo` varchar(45) COLLATE utf8_bin NOT NULL,
   `Celular` varchar(45) COLLATE utf8_bin NOT NULL,
-  `idrol` int(11) NOT NULL
+  `idrol` int(11) NOT NULL,
+  `Fecha` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
@@ -157,6 +182,13 @@ CREATE TABLE `usuarios_asist` (
 --
 
 TRUNCATE TABLE `usuarios_asist`;
+--
+-- Volcado de datos para la tabla `usuarios_asist`
+--
+
+INSERT INTO `usuarios_asist` (`idusuarios_asist`, `Nombres`, `Apellidos`, `Tipo_Documento`, `Documento`, `Correo`, `Celular`, `idrol`, `Fecha`) VALUES
+(1, 'Santiago', 'Hurtado', 'C&eacute;dula de Ciudadania', 1057601581, 'desarrollo-web@zk.com.co', '', 1, '2019-04-25 22:56:31');
+
 --
 -- Índices para tablas volcadas
 --
@@ -216,19 +248,19 @@ ALTER TABLE `usuarios_asist`
 -- AUTO_INCREMENT de la tabla `certs_env`
 --
 ALTER TABLE `certs_env`
-  MODIFY `idcerts_env` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idcerts_env` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `certs_gen`
 --
 ALTER TABLE `certs_gen`
-  MODIFY `idcerts_gen` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idcerts_gen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `consultas_gen`
 --
 ALTER TABLE `consultas_gen`
-  MODIFY `idconsultas_gen` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idconsultas_gen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -246,7 +278,7 @@ ALTER TABLE `usuarios_adm`
 -- AUTO_INCREMENT de la tabla `usuarios_asist`
 --
 ALTER TABLE `usuarios_asist`
-  MODIFY `idusuarios_asist` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idusuarios_asist` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
