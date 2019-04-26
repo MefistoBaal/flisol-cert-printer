@@ -6,9 +6,9 @@ include 'layouts/scripts.php';
             <div class="container">
                 <div class="login-wrap">
                     <div class="login-content">
-                        <div class="login-logo">
+                        <div class="login-logo mx-auto">
                             <a href="#">
-                                <img src="images/icon/logo.png" alt="CoolAdmin">
+                                <img src="images/logo_flisol.svg" alt="Flisol">
                             </a>
                         </div>
                         <div class="login-form">

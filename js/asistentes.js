@@ -14,7 +14,7 @@ function asistentes_table() {
                 case 1:
                     var info_tabla = '';
                     for (let index = 0; index < data.asist.length; index++) {
-                        info_tabla += '<tr><td>' + data.asist[index].Fecha + '</td><td>' + data.asist[index].Nombres + ' ' + data.asist[index].Apellidos + '</td><td>' + data.asist[index].Tipo_Documento + '</td><td>' + data.asist[index].Documento + '</td><td>' + data.asist[index].Correo + '</td></tr>'
+                        info_tabla += '<tr><td>' + data.asist[index].Fecha + '</td><td>' + data.asist[index].Nombres + ' ' + data.asist[index].Apellidos + '</td><td>' + data.asist[index].Tipo_Documento + '</td><td>' + data.asist[index].Documento + '</td><td>' + data.asist[index].Correo + '</td><td></td></tr>'
                     };
                     document.getElementById('data_users').innerHTML = info_tabla;
                     $('#tabla_usuarios').DataTable({
