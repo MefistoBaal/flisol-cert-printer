@@ -17,9 +17,12 @@ class IndexViews
             /**Constructor de vistas */
             $rutas = new Rutas();
 
+            /**Recorte vista raiz */
+            $vista_r = (isset($vista['vista'])) ? explode('/', $vista['vista']) : null;
+
             /**Inclusion de vista */
-            return (isset($vista['vista']))
-            ? $rutas->vista($vista['vista'])
+            return (isset($vista_r[0]))
+            ? $rutas->vista($vista_r[0])
             : $rutas->vista(null);
         } catch (\Exception $e) {
             die('ERROR: ' . $e->getMessage());

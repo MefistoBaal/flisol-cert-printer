@@ -64,6 +64,7 @@ class Consulta_Certificados
                         'apellidos' => $consulta_doc[0]['Apellidos'],
                         'correo'    => $consulta_doc[0]['Correo'],
                         'documento' => $consulta_doc[0]['Documento'],
+                        'cert'      => bin2hex(gzencode($consulta_doc[0]['idusuarios_asist'])),
                         'rol'       => $this->consulta_rol($consulta_doc[0]['idrol']),
                     ));
                 } elseif ($resp_consulta_email[0]->execute()) {
@@ -76,6 +77,7 @@ class Consulta_Certificados
                             'apellidos' => $consulta_email[0]['Apellidos'],
                             'correo'    => $consulta_email[0]['Correo'],
                             'documento' => $consulta_email[0]['Documento'],
+                            'cert'      => bin2hex(gzencode($consulta_email[0]['idusuarios_asist'])),
                             'rol'       => $this->consulta_rol($consulta_email[0]['idrol']),
                         ));
                     } else {

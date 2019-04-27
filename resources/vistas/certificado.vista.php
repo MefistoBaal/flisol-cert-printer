@@ -8,7 +8,8 @@ include 'layouts/scripts.php';
                     <div class="login-content">
                         <div class="login-logo mx-auto">
                             <a href="#">
-                                <img src="images/logo_flisol.svg" alt="Flisol">
+                                <img
+Mostrando 1 a 1 de 1 registrossrc="images/logo_flisol.svg" alt="Flisol">
                             </a>
                         </div>
                         <div class="login-form">

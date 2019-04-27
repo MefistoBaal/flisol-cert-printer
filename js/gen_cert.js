@@ -93,6 +93,9 @@ function generar_certificado() {
                             textAlign: 'left',
                             loader: true,
                         });
+                        var tarjeta_cert = '<div class="card"><div class="card-header">Certificado</div><div class="card-body"><div class="card-title"></div><hr><div class="row"><div class="col-12"><a href="/pdf/' + resp.cert + '" target="_blank"><button type="button" class="btn btn-danger btn-lg"><i class="fa fa-file-text"></i>Generar PDF</button></a><a href=""><button type="button" class="btn btn-primary btn-lg" disabled><i class="fa fa-location-arrow"></i>Enviar Correo</button></a></div>';
+
+                        document.getElementById('resp_gen').innerHTML = tarjeta_cert;
                         break;
                     case 0:
                         document.getElementById('gen_submit').disabled = false;

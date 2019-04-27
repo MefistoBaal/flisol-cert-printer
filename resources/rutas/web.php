@@ -39,6 +39,9 @@ class Rutas
                 case 'asistentes':
                     $this->vistas::_return_vista('asistentes');
                     break;
+                case 'pdf':
+                    $this->vistas::_return_vista('pdf');
+                    break;
                 default:
                     $this->vistas::_return_vista('404');
                     break;

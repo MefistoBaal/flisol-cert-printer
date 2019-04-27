@@ -6,7 +6,7 @@
 class Config
 {
     const DB_USERNAME = 'root';
-    const DB_PASS     = 'Z2004k-2018';
+    const DB_PASS     = '';
     const DB_HOST     = 'localhost';
     const DB_DATABASE = 'flisol_cert';
     const DB_CHAR     = 'SET CHARSET utf8';
