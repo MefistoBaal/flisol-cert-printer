@@ -45,6 +45,9 @@ class Rutas
                 case 'pdf':
                     $this->vistas::_return_vista('pdf');
                     break;
+                case 'verificar':
+                    $this->vistas::_return_vista('verificar');
+                    break;
                 default:
                     $this->vistas::_return_vista('404');
                     break;

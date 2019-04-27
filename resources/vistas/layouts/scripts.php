@@ -8,6 +8,9 @@ class Scripts
                 case 'consulta':
                     $ext_scrits = '<script src="js/consulta.js"></script>';
                     break;
+                case 'verificar':
+                    $ext_scrits = '<script src="js/verificar.js"></script>';
+                    break;
                 case 'login':
                     $ext_scrits = '<script src="js/login.js"></script>';
                     break;

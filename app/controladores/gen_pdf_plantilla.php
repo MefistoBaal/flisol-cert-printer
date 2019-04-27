@@ -10,7 +10,7 @@
     <page_footer>
         <div class="footer">
             <p>
-                Para verificar estecertificado, dirijase a <a href="https: //certificado.flisolbogota.org/verificar">https://certificado.flisolbogota.org/verificar</a> con el siguiente código: codigocod
+                Para verificar este certificado, dirijase a <a href="https: //certificados.flisolbogota.org/verificar">https://certificados.flisolbogota.org/verificar</a> con el siguiente código: <?php echo $this->cod_validacion; ?>
             </p>
         </div>
     </page_footer>

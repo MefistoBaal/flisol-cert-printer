@@ -17,6 +17,7 @@ class Generar_PDF
     private $error_info;
     private $id_decode;
     private $data_user;
+    private $cod_validacion;
 
     public function __construct()
     {
@@ -95,9 +96,38 @@ class Generar_PDF
         }
     }
 
+    private function generar_cod_validacion()
+    {
+        try {
+            /**Generar código aleatorio */
+            $cadena = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $largo  = strlen($cadena);
+            $codigo = '';
+            for ($i = 0; $i < 8; $i++) {
+                $codigo .= $cadena[rand(0, $largo - 1)];
+            }
+
+            $sql_codigo  = 'INSERT INTO pdf_validacion (Codigo) VALUES (:codigo)';
+            $resp_codigo = $this->con->ConectFlisol($sql_codigo);
+            $resp_codigo[0]->bindValue(':codigo', $codigo, PDO::PARAM_STR);
+
+            if ($resp_codigo[0]->execute()) {
+                $this->cod_validacion = $codigo;
+            } else {
+                $this->__salida(array(
+                    'info' => $resp_codigo[0]->errorInfo()[2],
+                ));
+            }
+
+        } catch (\Exception $e) {
+            die('ERROR_COD_VAL: ' . $e->getMessage());
+        }
+    }
+
     private function __construct_pdf($n_pdf)
     {
         try {
+            $this->generar_cod_validacion();
             ob_start();
 
             Generar_Estadistica::contar_certificado_gen();
