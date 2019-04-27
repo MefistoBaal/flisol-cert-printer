@@ -19,7 +19,6 @@ include 'layouts/scripts.php';
                                     <table class="table table-borderless table-striped table-earning" id="tabla_usuarios">
                                         <thead>
                                             <tr>
-                                                <th>fecha</th>
                                                 <th>nombres</th>
                                                 <th>tipo de documento</th>
                                                 <th>documento</th>

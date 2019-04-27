@@ -10,7 +10,7 @@ function consultar_cert() {
         beforeSend: function () {
             document.getElementById('doc_busq').disabled = true;
             document.getElementById('sub_consulta').disabled = true;
-            document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-success"><div class="card-header"><strong class="card-title">Buscando certificado...</strong></div><div class="card-body text-center"><img src="/images/loader.svg" style="width:100px;Contenido de respuesta	 "></img></div></div>';
+            document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-success"><div class="card-header"><strong class="card-title">Buscando certificado...</strong></div><div class="card-body text-center"><img src="/images/loader.svg" style="width:100px;"Contenido de respuesta"></img></div></div>';
         },
         success: function (data) {
             try {
@@ -19,7 +19,7 @@ function consultar_cert() {
                     case 1:
                         document.getElementById('doc_busq').disabled = false;
                         document.getElementById('sub_consulta').disabled = false;
-                        document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-success"><div class="card-header"><strong class="card-title">' + respuesta.nombres + ' ' + respuesta.apellidos + '</strong></div><div class="card-body"><p class="card-text"><strong>Correo:</strong> ' + respuesta.correo + '.</p><p class="card-text"><strong>Documento:</strong> ' + respuesta.documento + '.</p><p class="card-text"><strong>' + respuesta.rol + '</strong></p><a href="/pdf/' + respuesta.cert + '" target="_blank"><button type="button" class="btn btn-danger btn-lg"><i class="fa fa-file-text"></i>Generar PDF</button></a></div></div>';
+                        document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-success"><div class="card-header"><strong class="card-title">' + respuesta.nombres + ' ' + respuesta.apellidos + '</strong></div><div class="card-body"><p class="card-text"><strong>Correo:</strong> ' + respuesta.correo + '.</p><p class="card-text"><strong>Documento:</strong> ' + respuesta.documento + '</p><p class="card-text"><strong>' + respuesta.rol + '</strong></p><a href="/pdf/' + respuesta.cert + '" target="_blank"><button type="button" class="btn btn-danger btn-lg"><i class="fa fa-file-text"></i>Generar PDF</button></a></div></div>';
 
                         break;
                     case 2:

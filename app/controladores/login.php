@@ -27,6 +27,20 @@ class Login
         }
     }
 
+    private function destroy_session()
+    {
+        try {
+            session_name('FlisolADM');
+            session_destroy();
+            unset($_COOKIE['FlisolADM']);
+            $this->__salida(array(
+                'resp' => 1,
+            ));
+        } catch (\Exception $e) {
+            die('ERROR_DESTROY: ' . $e->getMessage());
+        }
+    }
+
     private function login_validate($data_log)
     {
         try {
