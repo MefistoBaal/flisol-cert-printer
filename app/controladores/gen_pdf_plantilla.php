@@ -1,5 +1,5 @@
 <link type="text/css" href="./css/pdf_style.css" rel="stylesheet" />
-<page backright="10px" backleft="10px" backtop="125px" backbottom="35px" style="border: 1px solid black;">
+<page backright="10px" backleft="10px" backtop="125px" backbottom="35px" style="border: 1px solid black;" backimg="./images/pdf_fl_background.png" backimgy="top">
 
     <page_header>
         <div class="logo">
@@ -10,7 +10,7 @@
     <page_footer>
         <div class="footer">
             <p>
-                Para verificar este certificado, dirijase a <a href="https: //certificados.flisolbogota.org/verificar">https://certificados.flisolbogota.org/verificar</a> con el siguiente código: <?php echo $this->cod_validacion; ?>
+                Para verificar este certificado, dirijase a <a href="https://certificados.flisolbogota.org/verificar">https://certificados.flisolbogota.org/verificar</a> con el siguiente código: <?php echo $this->cod_validacion; ?> <img class="chk" src="./images/check.png">      | info@flisolbogota.org
             </p>
         </div>
     </page_footer>
