@@ -51,4 +51,7 @@ window.onload = function () {
         event.preventDefault();
         consultar_cert();
     });
+    document.getElementById('verificar_cert').addEventListener('click', function () {
+        location.replace('verificar');
+    })
 }

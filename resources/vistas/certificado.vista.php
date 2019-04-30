@@ -19,6 +19,7 @@ include 'layouts/scripts.php';
                                 </div>
                                 <button id="sub_consulta" class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Consultar</button>
                             </form>
+                            <button id="verificar_cert" class="au-btn au-btn--block au-btn--blue m-b-20">Verificar mi certificado</button>
                             <div id="contenedor_cert">
 
                             </div>
