@@ -17,7 +17,7 @@
     <div class="container">
         <h2>Certifica:</h2>
         <p>
-            Qué el señor/a <strong><?php echo ucwords($this->data_user[0]['Nombres']) . ' ' . ucwords($this->data_user[0]['Apellidos']); ?></strong> identificado con <strong><?php echo $this->data_user[0]['Tipo_Documento']; ?></strong> No. <strong><?php echo $this->data_user[0]['Documento']; ?></strong>, asistió al Festival Latinoamericano de Instalación de Software Libre como: <br><br><a><strong><?php echo $this->data_user[0]['Nombre_Rol']; ?></strong></a><br><br>
+            Qué <strong><?php echo ucwords($this->data_user[0]['Nombres']) . ' ' . ucwords($this->data_user[0]['Apellidos']); ?></strong> identificado con <strong><?php echo $this->data_user[0]['Tipo_Documento']; ?></strong> No. <strong><?php echo $this->data_user[0]['Documento']; ?></strong>, participó en el  Festival Latinoamericano de Instalación de Software Libre como: <br><br><a><strong><?php echo $this->data_user[0]['Nombre_Rol']; ?></strong></a><br><br>
             Realizado en la <strong>Universidad Francisco José de Caldas Facultad de Ingeniería</strong> el dia 27 de abril de 2019.
         </p>
         <div class="organizadores">
