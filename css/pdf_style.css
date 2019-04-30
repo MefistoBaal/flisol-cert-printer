@@ -2,7 +2,7 @@ img{
     width: 280px;
 }
 h1 {
-    font-size: 40px;
+    font-size: 38px;
     text-align: center;
 }
 h2 {
@@ -22,7 +22,7 @@ p{
     width: 20px;
 }
 .container{
-    margin-top: 150px;
+    margin-top: 160px;
 }
 .container p{
     text-align: center;
@@ -32,8 +32,12 @@ p{
     font-size: 30px;
     text-decoration: none;
 }
+.organizadores img{
+    width: 128px;
+}
 .footer p {
     font-size: 15px;
+    text-align: center;
 }
 .footer a {
     text-decoration: none;
