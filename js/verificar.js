@@ -22,6 +22,8 @@ function verificar_cod() {
                     document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-success"><div class="card-header"><strong class="card-title">Validación certificado</strong></div><div class="card-body"><p class="card-text"><strong>No Valido</strong></div></div>';
                     break;
             }
+        } else {
+            document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-success"><div class="card-header"><strong class="card-title">Validación certificado</strong></div><div class="card-body"><p class="card-text"><strong>No Valido</strong></div></div>';
         }
     }).catch(error => {
         console.log(error);
