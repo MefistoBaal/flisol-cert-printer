@@ -10,7 +10,7 @@
     <page_footer>
         <div class="footer">
             <p>
-                Para verificar este certificado, dirijase a <a href="https://certificados.flisolbogota.org/verificar">https://certificados.flisolbogota.org/verificar</a> con el siguiente código: <?php echo $this->cod_validacion; ?> <img class="chk" src="./images/check.png"> <br> Organizó: Comunidad de Software Libre de Bogotá info@flisolbogota.org
+                Para verificar este certificado, dirijase a <a href="https://certificados.flisolbogota.org/verificar">https://certificados.flisolbogota.org/verificar</a> con el siguiente código: <?php echo $this->cod_validacion; ?> <img class="chk" src="./images/check.png"> <br> Organizó: Comunidades de Software Libre de Bogotá info@flisolbogota.org
             </p>
         </div>
     </page_footer>
