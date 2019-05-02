@@ -29,6 +29,7 @@
             <img src="./images/org/pyladies-logo.png">
             <img src="./images/org/scratch-logo.png">
             <img src="./images/org/uco-logo.png">
+            <img src="./images/org/photo_2019-05-02_08-22-50.jpg">
         </div>
     </div>
 </page>
