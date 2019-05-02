@@ -20,7 +20,7 @@
             Que <strong><?php echo ucwords($this->data_user[0]['Nombres']) . ' ' . ucwords($this->data_user[0]['Apellidos']); ?></strong> identificado con <strong><?php echo $this->data_user[0]['Tipo_Documento']; ?></strong> No. <strong><?php echo $this->data_user[0]['Documento']; ?></strong>, participó en el  Festival Latinoamericano de Instalación de Software Libre como: <br><br><a><strong><?php echo $this->data_user[0]['Nombre_Rol']; ?></strong></a><br><br>
             Realizado en la <strong>Universidad Francisco José de Caldas Facultad de Ingeniería</strong> el dia 27 de abril de 2019.
         </p>
-        <div class="organizadores">
+        <!--<div class="organizadores">
             <img src="./images/org/acmud-logo.png">
             <img src="./images/org/glud-logo.png">
             <img src="./images/org/hacklabgirls-logo.png">
@@ -30,6 +30,6 @@
             <img src="./images/org/scratch-logo.png">
             <img src="./images/org/uco-logo.png">
             <img src="./images/org/photo_2019-05-02_08-22-50.jpg">
-        </div>
+        </div>-->
     </div>
 </page>
