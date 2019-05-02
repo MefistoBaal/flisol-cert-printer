@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 30, 2019 at 10:52 PM
+-- Generation Time: May 02, 2019 at 02:42 PM
 -- Server version: 10.3.14-MariaDB
 -- PHP Version: 7.3.4
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `certs_env`
 --
 
+DROP TABLE IF EXISTS `certs_env`;
 CREATE TABLE `certs_env` (
   `idcerts_env` int(11) NOT NULL,
   `Cantidad` int(11) NOT NULL
@@ -39,6 +40,7 @@ CREATE TABLE `certs_env` (
 -- Table structure for table `certs_gen`
 --
 
+DROP TABLE IF EXISTS `certs_gen`;
 CREATE TABLE `certs_gen` (
   `idcerts_gen` int(11) NOT NULL,
   `Cantidad` int(11) NOT NULL
@@ -50,6 +52,7 @@ CREATE TABLE `certs_gen` (
 -- Table structure for table `consultas_gen`
 --
 
+DROP TABLE IF EXISTS `consultas_gen`;
 CREATE TABLE `consultas_gen` (
   `idconsultas_gen` int(11) NOT NULL,
   `Cantidad` int(11) NOT NULL
@@ -61,8 +64,10 @@ CREATE TABLE `consultas_gen` (
 -- Table structure for table `pdf_validacion`
 --
 
+DROP TABLE IF EXISTS `pdf_validacion`;
 CREATE TABLE `pdf_validacion` (
   `idpdf_validacion` int(11) NOT NULL,
+  `idusuarios_asist` int(11) NOT NULL,
   `Codigo` varchar(45) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -72,11 +77,17 @@ CREATE TABLE `pdf_validacion` (
 -- Table structure for table `roles`
 --
 
+DROP TABLE IF EXISTS `roles`;
 CREATE TABLE `roles` (
   `idroles` int(11) NOT NULL,
   `Nombre_Rol` varchar(45) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Truncate table before insert `roles`
+--
+
+TRUNCATE TABLE `roles`;
 --
 -- Dumping data for table `roles`
 --
@@ -94,6 +105,7 @@ INSERT INTO `roles` (`idroles`, `Nombre_Rol`) VALUES
 -- Table structure for table `usuarios_adm`
 --
 
+DROP TABLE IF EXISTS `usuarios_adm`;
 CREATE TABLE `usuarios_adm` (
   `idusuarios_adm` int(11) NOT NULL,
   `Nombres` varchar(45) COLLATE utf8_bin NOT NULL,
@@ -105,6 +117,11 @@ CREATE TABLE `usuarios_adm` (
   `Documento` varchar(45) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Truncate table before insert `usuarios_adm`
+--
+
+TRUNCATE TABLE `usuarios_adm`;
 --
 -- Dumping data for table `usuarios_adm`
 --
@@ -118,6 +135,7 @@ INSERT INTO `usuarios_adm` (`idusuarios_adm`, `Nombres`, `Apellidos`, `Email`, `
 -- Table structure for table `usuarios_asist`
 --
 
+DROP TABLE IF EXISTS `usuarios_asist`;
 CREATE TABLE `usuarios_asist` (
   `idusuarios_asist` int(11) NOT NULL,
   `Nombres` varchar(45) COLLATE utf8_bin NOT NULL,
