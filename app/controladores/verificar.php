@@ -28,17 +28,34 @@ class Verificar_Certificado
         }
     }
 
+    private function consultar_usuario($id_user)
+    {
+        try {
+            $sql_user  = 'SELECT * FROM usuarios_asist WHERE idusuarios_asist= :id_usuario';
+            $resp_user = $this->con->ConectFlisol($sql_user);
+            $resp_user[0]->bindValue(':id_usuario', $id_user, PDO::PARAM_INT);
+
+            return ($resp_user[0]->execute()) ? $resp_user[0]->fetch(PDO::FETCH_ASSOC) : $resp_user[0]->errorInfo()[2];
+        } catch (\Throwable $th) {
+            die('ERROR_USUARIO: ' . $th->getMessage());
+        }
+    }
+
     private function verificar_cert($data)
     {
         try {
-            $sql_val  = 'SELECT COUNT(*) AS val FROM pdf_validacion WHERE Codigo= :codigo';
+            $sql_val  = 'SELECT COUNT(*) AS val, idusuarios_asist FROM pdf_validacion WHERE Codigo= :codigo';
             $resp_val = $this->con->ConectFlisol($sql_val);
             $resp_val[0]->bindValue(':codigo', htmlentities(addslashes($data['cod_busq'])), PDO::PARAM_STR);
 
             if ($resp_val[0]->execute()) {
-                if ($resp_val[0]->fetch(PDO::FETCH_ASSOC)['val'] > 0) {
+                $val_cod = $resp_val[0]->fetch(PDO::FETCH_ASSOC);
+                if ($val_cod['val'] > 0) {
+                    $data_user_validado = $this->consultar_usuario($val_cod['idusuarios_asist']);
                     $this->__salida(array(
-                        'resp' => 1,
+                        'resp'      => 1,
+                        'Nombres'   => $data_user_validado['Nombres'] . ' ' . $data_user_validado['Apellidos'],
+                        'Documento' => $data_user_validado['Tipo_Documento'] . ' No. ' . $data_user_validado['Documento'],
                     ));
                 } else {
                     $this->__salida(array(

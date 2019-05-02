@@ -13,7 +13,7 @@ function verificar_cod() {
         if (data.resp) {
             switch (data.resp) {
                 case 1:
-                    document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-success"><div class="card-header"><strong class="card-title">Validación certificado</strong></div><div class="card-body"><p class="card-text"><strong>Valido</strong></div></div>';
+                    document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-success"><div class="card-header"><strong class="card-title">Validación certificado</strong></div><div class="card-body"><p class="card-text"><strong>Valido</strong></p><p class="card-text"><strong>Nombres: </strong>' + data.Nombres + '</p><p class="card-text"><strong>Documento: </strong>' + data.Documento + '</p></div></div>';
                     break;
                 case 0:
                     document.getElementById('contenedor_cert').innerHTML = '<div class="card border border-success"><div class="card-header"><strong class="card-title">Validación certificado</strong></div><div class="card-body"><p class="card-text"><strong>No Valido</strong></div></div>';

@@ -107,8 +107,9 @@ class Generar_PDF
                 $codigo .= $cadena[rand(0, $largo - 1)];
             }
 
-            $sql_codigo  = 'INSERT INTO pdf_validacion (Codigo) VALUES (:codigo)';
+            $sql_codigo  = 'INSERT INTO pdf_validacion (idusuarios_asist, Codigo) VALUES (:id_usuario, :codigo)';
             $resp_codigo = $this->con->ConectFlisol($sql_codigo);
+            $resp_codigo[0]->bindValue(':id_usuario', $this->data_user[0]['idusuarios_asist'], PDO::PARAM_INT);
             $resp_codigo[0]->bindValue(':codigo', $codigo, PDO::PARAM_STR);
 
             if ($resp_codigo[0]->execute()) {
