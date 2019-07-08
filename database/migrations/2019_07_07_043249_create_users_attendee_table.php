@@ -19,7 +19,7 @@ class CreateUsersAttendeeTable extends Migration
             $table->string('second_names');
             $table->enum('doc_type', ['CC', 'Passport', 'TI', 'NIT']);
             $table->bigInteger('document');
-            $table->string('email');
+            $table->string('email', 60)->unique();
             $table->string('phone');
             $table->bigInteger('id_rol')->nullable(false)->unsigned();
             $table->timestamps();

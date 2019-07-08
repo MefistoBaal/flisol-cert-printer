@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace FlisolCertPrinter\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use FlisolCertPrinter\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller

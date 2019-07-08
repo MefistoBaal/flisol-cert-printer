@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace FlisolCertPrinter\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
