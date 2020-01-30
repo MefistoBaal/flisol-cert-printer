@@ -1,4 +1,5 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/js/react/admin/app.js": "/js/react/admin/app.js?id=5b42d79063380f334823",
+    "/js/react/home/app.js": "/js/react/home/app.js?id=92e21c011f204c1daae9",
+    "/js/react/login/app.js": "/js/react/login/app.js?id=5224f60a677a2dc91592"
 }

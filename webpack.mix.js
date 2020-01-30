@@ -10,6 +10,7 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
-mix.react('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+mix.browserSync('https://flisol.test');
+mix.react('resources/js/home/app.jsx', 'public/js/react/home').version()
+    .react('resources/js/login/app.jsx', 'public/js/react/login').version()
+    .react('resources/js/admin/app.jsx', 'public/js/react/admin').version();

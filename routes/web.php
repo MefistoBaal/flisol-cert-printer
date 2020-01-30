@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
+Route::view('/', 'home')->name('home');
+Route::permanentRedirect('/home', '/');
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::view('/admin', 'admin')->middleware('auth');
