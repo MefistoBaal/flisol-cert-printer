@@ -14,7 +14,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+Auth::routes();
 Route::view('/', 'home')->name('home');
 Route::permanentRedirect('/home', '/');
-Auth::routes();
 Route::view('/admin', 'admin')->middleware('auth');

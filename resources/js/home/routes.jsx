@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, Redirect, Route, Switch} from "react-router-dom";
+import {Redirect, Route, Switch} from "react-router-dom";
 import Home from "./index";
 import VerificarCertificado from "./verificar";
 import {MemoryRouter as Router} from "react-router";
@@ -15,8 +15,6 @@ export default class HomeRoutes extends React.Component {
     render() {
         return (
             <Router>
-                <Link to="/verificar">Verificar</Link>
-                <Link to="/home">Consultar</Link>
                 <Switch>
                     <Route path="/" exact>
                         {!this.state.actualPath
