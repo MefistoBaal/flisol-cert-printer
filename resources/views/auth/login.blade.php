@@ -1,5 +1,4 @@
 @extends('layouts.no-header')
-
 @section('content')
     <div id="loginApp">
 

@@ -1,5 +1,6 @@
 {
-    "/js/react/admin/app.js": "/js/react/admin/app.js?id=5b42d79063380f334823",
-    "/js/react/home/app.js": "/js/react/home/app.js?id=d91e29d6470042ddc4ba",
-    "/js/react/login/app.js": "/js/react/login/app.js?id=5224f60a677a2dc91592"
+    "/js/app.js": "/js/app.js?id=f7c195890b28fa55397c",
+    "/js/react/admin/app.js": "/js/react/admin/app.js?id=06582783fef76e3b9911",
+    "/js/react/home/app.js": "/js/react/home/app.js?id=775158ef8f825b069ea9",
+    "/js/react/login/app.js": "/js/react/login/app.js?id=b8bfbbdc335939fdef02"
 }

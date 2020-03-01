@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::middleware('api')->post('/consulta/certificado', function (Request $request) {
+    return $request;
+});
+Route::middleware('api')->post('/consulta/verificar', function (Request $request) {
+    return $request;
+});

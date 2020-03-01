@@ -10,6 +10,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $table = 'admin';
     /**
      * The attributes that are mass assignable.
      *
@@ -36,4 +37,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function login_history(){
+        return $this->hasMany('App\LoginHistory');
+    }
 }

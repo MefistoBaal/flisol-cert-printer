@@ -34,6 +34,7 @@
 <body>
 @yield('content')
 <!-- Scripts -->
+<script src="{{mix('js/app.js')}}"></script>
 @yield('scripts')
 </body>
 </html>
