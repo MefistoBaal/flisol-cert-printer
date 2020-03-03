@@ -1,7 +1,6 @@
-@extends('layouts.no-header')
+@extends('layouts.admin')
 @section('content')
     <div id="adminApp">
-
     </div>
 @endsection
 @section('scripts')

@@ -1,8 +1,8 @@
 import React from 'react'
 import {Redirect, Route, Switch} from "react-router-dom";
+import {MemoryRouter as Router} from "react-router";
 import Home from "./index";
 import VerificarCertificado from "./verificar";
-import {MemoryRouter as Router} from "react-router";
 
 export default class HomeRoutes extends React.Component {
     constructor(props) {
@@ -32,5 +32,4 @@ export default class HomeRoutes extends React.Component {
             </Router>
         )
     }
-
 }
